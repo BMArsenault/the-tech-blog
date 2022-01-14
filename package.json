@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "seed": "node server.js"
+    "seeds": "node seeds/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
