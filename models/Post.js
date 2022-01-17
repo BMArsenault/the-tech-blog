@@ -2,16 +2,16 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Post model
 class Post extends Model {
-  static postBlog(body, models) {
+  postBlog(body, models) {
       return Post.findOne({
         where: {
           id: body.post_id
         },
         attributes: [
           'id',
-          'post_url',
           'title',
-          'created_at',
+          'description',
+          'created_at'
         ],
         include: [
           {
@@ -40,12 +40,9 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      post_url: {
+      description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
+        allowNull: false
       },
       user_id: {
         type: DataTypes.INTEGER,

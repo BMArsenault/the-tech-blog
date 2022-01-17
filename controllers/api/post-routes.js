@@ -5,13 +5,12 @@ const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
-  console.log('======================');
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
       'title',
-      'created_at',
+      'description',
+      'created_at'
     ],
     include: [
       {
@@ -42,8 +41,8 @@ router.get('/:id', (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
         'title',
+        'description',
         'created_at',
       ],
       include: [
@@ -78,7 +77,7 @@ router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Post.create({
       title: req.body.title,
-      post_url: req.body.post_url,
+      description: req.body.description,
       user_id: req.session.user_id
     })
       .then(dbPostData => res.json(dbPostData))
@@ -93,7 +92,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/blog-post', withAuth, (req, res) => {
   // custom static method created in models/Post.js
   if (req.session) {
-  Post.postBlog({ ...req.body, user_id: req.session.user_id }, { Comment, User })
+  Post.postBlog({...req.body, user_id: req.session.user_id }, { Comment, User })
     .then(updatedPostData => res.json(updatedPostData))
     .catch(err => {
       console.log(err);
