@@ -6,7 +6,8 @@ This tech blog allows developers to post, edit and delete posts for others in th
 
 ## Installation
 
-Install VS Code and type "npm i" in the command line.
+Install VS Code and clone repo.
+Type "npm i" in the command line to install dependencies.
 Create .env file
 
 ## Usage
@@ -15,20 +16,20 @@ Upon login, the user is introduced to the collection of blog posts, listed in ch
 
 ## Links
 
-* 🌎 [Heroku Page]()
+* 🌎 [Heroku Page](https://salty-island-41291.herokuapp.com/)
 * 💾 [Repo](https://github.com/BMArsenault/the-tech-blog)
 
 ## Technology
 
-* Express
-* Node.js
-* MYSQL
-* Sequelize
-* Handlebars
-* JAWSDB
-* Dotenv
-* Bulma CSS
-* Bcrypt
+* <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
+* <a href="https://nodejs.org/en/docs/" target="_blank">Node.js</a>
+* <a href="https://www.mysql.com/" target="_blank">MYSQL</a>
+* <a href="https://sequelize.org/" target="_blank">Sequelize</a>
+* <a href="https://www.npmjs.com/package/handlebars" target="_blank">Handlebars</a>
+* <a href="https://www.jawsdb.com/docs/" target="_blank">JAWSDB</a>
+* <a href="https://www.npmjs.com/package/dotenv" target="_blank">Dotenv</a>
+* <a href="https://bulma.io/" target="_blank">Bulma CSS</a>
+* <a href="https://www.npmjs.com/package/bcrypt" target="_blank">Bcrypt</a>
 
 ## App Preview
 
