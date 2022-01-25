@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "seeds": "node seeds/index.js",
-    "heroku-postbuild": "npm run seeds"
+    "seed": "node seeds/index.js",
+    "heroku-postbuild": "npm run seed"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
